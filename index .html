@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Design</title>
+    <link rel="stylesheet" href="home new.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <style>
+        body {
+            background-color: #7021b1; 
+        }
+        .carousel-inner .item img {
+            display: block;
+            margin: 0 auto;
+        }
+        #demo-box {
+            width: 150px;
+            height: 50px;
+            background-color: yellowgreen;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 5px;
+            display: none; 
+        }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <div class="canvas-container">
+            <img src="logo.jpeg" alt="Picture">
+        </div>
+        <div class="header-links">
+            <a href="courses exist.html">Courses</a>
+            <a href="timeline.html">Live Sessions</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact us .html">Customer Support</a>
+            <a href="buttons.html" id="login-button">Login</a> </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Make Learning Easier</h1>
+            <p>Discover ways to improve learning for everyone.</p>
+            <a href="courses exist.html" class="btn">Get Started</a>
+        </div>
+    </section>
+      
+    <section class="carousel-section">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="parents and students courses .html"><img src="parents.jpeg" alt="parents" style="width:50%;"></a>
+                </div>
+                <div class="item">
+                    <a href="ADHD course .html"><img src="adhd.jpeg" alt="ADHD" style="width:50%;"></a>
+                </div>
+                <div class="item">
+                    <a href="Teachers course .html"><img src="teacher.jpeg" alt="Teachers" style="width:50%;"></a>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><div class="glyphicon glyphicon-chevron-left" aria-hidden="true"></div><div class="sr-only">Previous</div></a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><div class="glyphicon glyphicon-chevron-right" aria-hidden="true"></div><div class="sr-only">Next</div></a>
+        </div>
+    </section>
+
+    <section class="live-session" id="live-session">
+        <h2>Set up a live session</h2>
+        <p>Connect with us to schedule a session tailored to your needs. Whether you are a student, parent, or teacher, we offer personalized support to make learning easier.</p>
+        <a href="live sessions .html" class="btn" id="learn-more-btn">Learn More</a>
+    </section>
+
+    <section class="who-we-are">
+        <img src="logo.jpeg" alt="Logo">
+        <h2>Who we are</h2>
+        <p>We are dedicated to making education accessible and easier for everyone, especially those with ADHD. Our team works with educators and families to find the best solutions for learning success.</p>
+    </section>
+
+    <div id="demo-box">JQuery Animation Demo</div>
+
+    <section class="subscribe" id="subscribe">
+        <h2>Subscribe to our newsletter</h2>
+        <form id="subscribe-form">
+            <input type="email" placeholder="Enter your email" id="email-input">
+            <button type="submit">Subscribe</button>
+        </form>
+        <div class="gif-container">
+            <img src="lenADHD-gif.gif" alt="LenADHD GIF" style="width:100%; max-width:400px; display:block; margin:20px auto;">
+        </div> 
+    </section>
+
+    <section class="related-pages" id="related-pages">
+        <h2>Go and see other pages to know more about ADHD</h2>
+        <div class="external-link">
+            <a href="https://www.healthline.com/health/adhd" target="_blank">Healthline Website</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-paragraph"></div>
+        <p>© 2025 lenADHD. All rights reserved.</p>
+    </footer>
+
+<script>
+$(document).ready(function(){
+
+    $("#learn-more-btn").click(function(e){
+        alert("Learn More button clicked! Redirecting to live sessions page.");
+    });
+
+    $("#login-button").mouseenter(function(){
+        $(this).css({
+            "text-decoration": "underline",
+            "font-weight": "bold"
+        });
+    }).mouseleave(function(){
+        $(this).css({
+            "text-decoration": "none",
+            "font-weight": "normal"
+        });
+    });
+
+    $("#subscribe-form").submit(function(e){
+        e.preventDefault(); 
+        const email = $("#email-input").val(); 
+        alert("Form submitted! Email captured: " + email);
+        console.log("Form submission intercepted.");
+    });
+});
+
+
+const heroHeading = document.getElementsByTagName("h1")[0];
+const messages = ["Make Learning Easier", "Learn in Your Own Way", "Education for Everyone"];
+let i = 0;
+setInterval(function() {
+    heroHeading.innerHTML = messages[i];
+    i = (i + 1) % messages.length;
+}, 4000);
+
+const heroParagraph = document.getElementsByTagName("p")[0];
+const subMessages = ["Discover ways to improve learning.", "Empower students, teachers, and parents.", "Together we make learning easier."];
+let j = 0;
+setInterval(function() {
+    heroParagraph.innerHTML = subMessages[j];
+    j = (j + 1) % subMessages.length;
+}, 4000);
+
+
+const colors = ["#c56cea", "#df6cea", "#d1a3ff", "#a26cea"];
+let c = 0;
+setInterval(function() {
+    document.body.style.backgroundColor = colors[c];
+    c = (c + 1) % colors.length;
+}, 2500);
+
+const button = document.getElementsByClassName("btn")[0];
+const btnText = ["Get Started", "Join Us", "Start Learning"];
+let b = 0;
+setInterval(function() {
+    button.innerHTML = btnText[b];
+    b = (b + 1) % btnText.length;
+}, 4000);
+
+const footer = document.getElementsByTagName("footer")[0];
+setInterval(function() {
+    const now = new Date();
+    footer.innerHTML = "<p>© " + now.getFullYear() + " lenADHD. All rights reserved. | Updated: " + now.toLocaleTimeString() + "</p>";
+}, 2500);
+</script>
+</body>
+</html>
