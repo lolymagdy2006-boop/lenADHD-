@@ -1,0 +1,197 @@
+/* General Resets and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f3e5f5; 
+    color: #333; 
+    transition: background-color 0.5s ease;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+h2 {
+    color: #4a148c;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section {
+    /* Limit width for readability and center content on wide screens */
+    padding: 50px 20px;
+    max-width: 1200px; 
+    margin: 0 auto 30px auto; 
+    border-radius: 10px; 
+}
+
+/* --- Header & Navigation (Optimized for Desktop) --- */
+header {
+    background-color: #ffffff;
+    /* Flexbox layout: logo left, links right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.canvas-container img {
+    max-width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header-links {
+    display: flex;
+    gap: 25px; 
+}
+
+.header-links a {
+    color: #4a148c; 
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.header-links a:hover {
+    color: #8e24aa;
+    background-color: #f3e5f5; 
+    border-radius: 5px;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: #7b1fa2;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #e1bee7;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ce93d8;
+}
+
+.btn {
+    background-color: #8e24aa;
+    color: #ffffff !important; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #6a1b9a;
+}
+
+/* --- Carousel Specifics (MAXIMIZED for Laptop) --- */
+.carousel-section {
+    text-align: center;
+    background-color: #ffffff; 
+    padding: 100px 20px; /* Increased vertical space for a bigger presence */
+}
+
+.carousel-inner .item img {
+    width: 100%; 
+    max-width: 1200px; /* Increased max-width for a larger visual presence */
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px; /* Slightly larger border radius for a polished look */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+    font-size: 40px; /* Larger icons for better visibility */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4a148c; 
+    text-shadow: none;
+}
+
+/* --- Other Sections --- */
+.live-session {
+    background-color: #ede7f6;
+    text-align: center;
+}
+
+/* Who We Are Layout (Desktop Flexbox: image and text side-by-side) */
+.who-we-are {
+    background-color: #f3e5f5;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left; 
+    padding: 40px 5%;
+}
+
+.who-we-are img {
+    max-width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0; 
+    margin-bottom: 0; 
+}
+
+.who-we-are h2 {
+    text-align: left; 
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* --- Subscribe Section --- */
+.subscribe {
+    background-color: #6a1b9a;
+    color: #ffffff;
+    text-align: center;
+}
+
+.subscribe input {
+    margin: 10px 0;
+    padding: 12px; 
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ce93d8;
+    border-radius: 5px;
+    color: #333; 
+}
+
+.subscribe button {
+    background-color: #8e24aa;
+    color: #ffffff;
+    padding: 12px 25px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: auto;
+    background-color: #4a148c;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
