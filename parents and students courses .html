@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses for Parents and Students</title>
+    <link rel="stylesheet" href="courses pages.css">
+</head>
+<body>
+    <header>
+        <h1>Courses for Parents and Students</h1>
+        <nav>
+            <ul>
+                <li><a href="home page.html">Home</a></li>
+                <li><a href="live sessions .html">Live Sessions</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="courses exist.html">Courses</a></li>
+                <li><a href="contact us .html">Customer Support</a></li>
+                <li><a href="buttons.html">Login</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section class="container">
+        <section class="course">
+            <h2>Course 1: Understanding ADHD</h2>
+            <p>This course provides an overview of ADHD, including symptoms, diagnosis, and treatment options.</p>
+            <button onclick="location.href='course registration.html'">Enroll Now</button>
+        </section>
+        <section class="course">
+            <h2>Course 2: Strategies for Parents</h2>
+            <p>Learn effective strategies to support your child with ADHD at home and in school.</p>
+            <button onclick="location.href='course registration.html'">Enroll Now</button>
+        </section>
+        <section class="course">
+            <h2>Course 3: Study Skills for Students</h2>
+            <p>This course offers practical tips and techniques to help students with ADHD improve their study habits.</p>
+            <button onclick="location.href='course registration.html'">Enroll Now</button>
+        </section>
+        <section class="course">
+            <h2>Course 4: Advanced ADHD Management</h2>
+            <p>This course offers advanced strategies for managing ADHD in various settings.</p>
+            <button onclick="location.href='course registration.html'">Enroll Now</button>
+        </section>
+    </main>
+    <script>
+
+const mainTitle = document.getElementsByTagName("h1")[0];
+const titleTexts = [
+  "Courses for Parents and Students",
+  "Learn Together, Grow Together",
+  "Empower Families with Knowledge"
+];
+let t = 0;
+setInterval(function() {
+  mainTitle.innerHTML = titleTexts[t];
+  t = (t + 1) % titleTexts.length;
+}, 2500);
+
+const colors = ["#e874ec", "#ffd6ff", "#f9c0ff", "#d1a3ff"];
+let c = 0;
+setInterval(function() {
+  document.body.style.backgroundColor = colors[c];
+  c = (c + 1) % colors.length;
+}, 4000);
+
+const courseTitles = document.getElementsByTagName("h2");
+let i = 0;
+setInterval(function() {
+  for (let x = 0; x < courseTitles.length; x++) {
+    courseTitles[x].style.color = "black";
+  }
+  courseTitles[i].style.color = "purple";
+  i = (i + 1) % courseTitles.length;
+}, 1500);
+
+const paragraphs = document.getElementsByTagName("p");
+const courseDescriptions = [
+  "Learn about ADHD and how it affects learning and behavior.",
+  "Practical tools and parenting techniques for daily life.",
+  "Study methods that make learning fun and productive.",
+  "Deep understanding of ADHD management and coping skills."
+];
+let d = 0;
+setInterval(function() {
+  for (let k = 0; k < paragraphs.length; k++) {
+    paragraphs[k].innerHTML = courseDescriptions[k];
+  }
+  d = (d + 1) % paragraphs.length;
+}, 3500);
+
+const buttons = document.getElementsByTagName("button");
+const btnTexts = ["Enroll Now", "Join Course", "Start Learning"];
+let b = 0;
+setInterval(function() {
+  for (let m = 0; m < buttons.length; m++) {
+    buttons[m].innerHTML = btnTexts[b];
+  }
+  b = (b + 1) % btnTexts.length;
+}, 2500);
+
+const footer = document.createElement("footer");
+footer.innerHTML = "<p>© 2025 lenADHD | Updated: " + new Date().toLocaleTimeString() + "</p>";
+document.body.appendChild(footer);
+setInterval(function() {
+  const now = new Date();
+  footer.innerHTML = "<p>© " + now.getFullYear() + " lenADHD | Updated: " + now.toLocaleTimeString() + "</p>";
+}, 1000);
+</script>
+</body>
+</html>
