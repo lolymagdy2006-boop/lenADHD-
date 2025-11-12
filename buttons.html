@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security String Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0ff;
+            color: #4b0082;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #4b0082;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #6a0dad;
+            margin-bottom: 1em;
+        }
+
+        .container {
+            background-color: #d8bfd8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: Q 4s infinite alternate;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        @keyframes Q {
+            from { background-color: #d8bfd8; }
+            to { background-color: #dda0dd; }
+        }
+
+        input[type="text"] {
+            font-size: 1.5em;
+            width: 40px;
+            height: 42px;
+            text-align: center;
+            border: 2px solid #ba55d3;
+            border-radius: 5px;
+            margin-bottom: 1em;
+        }
+
+        button {
+            height: 40px;
+            width: 120px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #8a2be2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #5d3fd3;
+        }
+
+        #Result, #LockOut {
+            margin-top: 1em;
+            color: #800080;
+        }
+
+        .case-sensitive {
+            font-size: 0.9em;
+            color: #6a0dad;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter the letter in position number</h1>
+        <h1 id="LetterNumber"></h1>
+        <h1>of your memorable word</h1>
+        <h2>
+            Please enter the letter here:
+            <input id="Letter" type="text" autofocus>
+        </h2>
+        <p class="case-sensitive">(case-sensitive!)</p>
+        <button id="SubmitButton" onclick="SecurityTest()">Submit</button>
+        <button id="TryAgainButton" onclick="SecurityTest()">Try again</button>
+        <h1 id="Result"></h1>
+        <h2 id="LockOut"></h2>
+    </div>
+    <script>
+        // Define the memorable word (password) and initialize variables
+        var MemWord = "lenADHD"; // The password
+        var count = 0; // Tracks failed attempts
+        var MWordLength = MemWord.length; // Length of the password
+        var PositionNumber; // Position of the letter to guess
+
+        // Function to generate a random position number and update the UI
+        function MemLetterGenerator() {
+            PositionNumber = Math.floor(Math.random() * MWordLength) + 1;
+            document.getElementById("LetterNumber").innerHTML = PositionNumber;
+            document.getElementById("SubmitButton").style.display = "inline";
+            document.getElementById("TryAgainButton").style.display = "none";
+            document.getElementById("Letter").value = "";
+            document.getElementById("Result").innerHTML = ""; // Clear previous result message
+            document.getElementById("LockOut").innerHTML = ""; // Clear previous lockout message
+        }
+
+        // Initialize the letter generator
+        MemLetterGenerator();
+
+        // Function to handle the security test
+        function SecurityTest() {
+            var tryAgainDisplay = document.getElementById("TryAgainButton").style.display;
+            if (tryAgainDisplay === "inline") {
+                document.getElementById("Letter").value = "";
+                document.getElementById("Result").innerHTML = ""; // Clear previous result message
+                document.getElementById("SubmitButton").style.display = "inline";
+                document.getElementById("TryAgainButton").style.display = "none";
+                return;
+            }
+
+            var userInput = document.getElementById("Letter").value.trim();
+            if (userInput === "") {
+                document.getElementById("Result").innerHTML = "Please enter a letter.";
+                return;
+            }
+
+            var correctLetter = MemWord.slice(PositionNumber - 1, PositionNumber);
+
+            if (userInput === correctLetter) {
+                document.getElementById("Result").innerHTML = "Memorable word check ok";
+                window.location.href = 'home page.html'; // Redirect on success
+            } else {
+                count++;
+                document.getElementById("Result").innerHTML = "Security check failed";
+                document.getElementById("SubmitButton").style.display = "none";
+                document.getElementById("TryAgainButton").style.display = "inline";
+
+                if (count === 3) {
+                    document.getElementById("LockOut").innerHTML = "Refresh the page to try again";
+                    document.getElementById("TryAgainButton").style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style contact us .css">
+</head>
+<body>
+    <!-- Header with Logo and Menu -->
+    <header>
+        <img src="logo.jpeg" alt="Logo" class="logo">
+        <nav class="menu-icon">
+            <a href="home page.html">Home</a>
+            <a href="BLOG.html">Blog</a>
+            <a href="courses exist.html">Courses</a>
+            <a href="buttons.html">Login</a>
+        </nav>
+    </header>
+
+    <!-- Contact Us Section -->
+    <section class="customer-support">
+        <h1>Customer support</h1>
+        <p>Want to collaborate? Just share a few details, and we’ll be in touch soon. We’re excited to connect with you!</p>
+        <a href="mailto:loly2006@gmail.com">loly2006@gmail.com</a>
+        <p>01167820089</p>
+        
+        <form action="#" method="POST">
+            <label for="first-name">First Name <span class="required">(required)</span></label>
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+
+            <label for="last-name">Last Name <span class="required">(required)</span></label>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+
+            <label for="email">Email <span class="required">(required)</span></label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <label for="message">Message <span class="required">(required)</span></label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="explore">
+                <h3>Explore</h3>
+                <a href="BLOG.html">BLOG</a>
+                <a href="contact us .html">Contact</a>
+                <a href="courses exist.html">courses</a>
+            </div>
+            <div class="follow-us">
+                <h3>Follow us</h3>
+                <a href="mailto:loly2006@gmail.com">Email</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+        <div class="subscribe">
+            <p>Sign up with your email address to receive news and updates.</p>
+            <form>
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </footer>
+    <script>
+
+const heading = document.getElementsByTagName("h1")[0];
+const headingTexts = [
+  "Customer Support",
+  "We’re Here to Help You",
+  "Let’s Stay Connected"
+];
+let i = 0;
+setInterval(function() {
+  heading.innerHTML = headingTexts[i];
+  i = (i + 1) % headingTexts.length;
+}, 2500);
+
+const colors = ["#e874ec", "#ffd6ff", "#f9c0ff", "#d1a3ff"];
+let c = 0;
+setInterval(function() {
+  document.body.style.backgroundColor = colors[c];
+  c = (c + 1) % colors.length;
+}, 4000);
+
+const labels = document.getElementsByTagName("label");
+let l = 0;
+setInterval(function() {
+  for (let x = 0; x < labels.length; x++) {
+    labels[x].style.color = "black";
+  }
+  labels[l].style.color = "purple";
+  l = (l + 1) % labels.length;
+}, 1500);
+
+const button = document.getElementsByTagName("button")[0];
+const btnTexts = ["Send", "Submit", "Contact Us"];
+let b = 0;
+setInterval(function() {
+  button.innerHTML = btnTexts[b];
+  b = (b + 1) % btnTexts.length;
+}, 2000);
+
+button.addEventListener("click", function(event) {
+  event.preventDefault(); 
+  const msg = document.createElement("p");
+  msg.innerHTML = "Thank you for contacting us!";
+  msg.style.color = "green";
+  msg.style.fontWeight = "bold";
+  document.getElementsByClassName("customer-support")[0].appendChild(msg);
+});
+
+const footer = document.getElementsByTagName("footer")[0];
+setInterval(function() {
+  const now = new Date();
+  footer.lastElementChild.innerHTML =
+    "<p>© " + now.getFullYear() + " lenADHD | Updated: " + now.toLocaleTimeString() + "</p>";
+}, 1000);
+</script>
+</body>
+</html>

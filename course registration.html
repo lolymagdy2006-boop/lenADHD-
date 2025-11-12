@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="course registration.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Course Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="first-name">First Name (required)</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name (required)</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone (required)</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email (required)</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label> Course you want to attend (required)</label>
+                <input type="radio" id="for-teachers" name="course" value="for-teachers" required>
+                <label for="for-teachers">For teachers</label><br>
+                <input type="radio" id="for-parents and students" name="course" value="for-parents and students" required>
+                <label for="for-parents and students">For parents and students</label><br>
+                <input type="radio" id="adhd" name="course" value="adhd" required>
+                <label for="adhd">ADHD</label>
+            </div>
+            <div class="form-group">
+                <button type="submit" formaction="home page.html">SEND</button>
+            </div>
+        </form>
+    </div>
+    <script>
+
+const formTitle = document.getElementsByTagName("h2")[0];
+const titles = ["Course Registration Form", "Join Our Learning Community", "Sign Up for a Course"];
+let i = 0;
+setInterval(function() {
+  formTitle.innerHTML = titles[i];
+  i = (i + 1) % titles.length;
+}, 2500);
+
+const colors = ["#e874ec", "#ffd6ff", "#f9c0ff", "#d1a3ff"];
+let c = 0;
+setInterval(function() {
+  document.body.style.backgroundColor = colors[c];
+  c = (c + 1) % colors.length;
+}, 4000);
+
+const labels = document.getElementsByTagName("label");
+let l = 0;
+setInterval(function() {
+  for (let x = 0; x < labels.length; x++) {
+    labels[x].style.color = "black";
+  }
+  labels[l].style.color = "purple";
+  l = (l + 1) % labels.length;
+}, 1500);
+
+const button = document.getElementsByTagName("button")[0];
+button.addEventListener("click", function() {
+  const msg = document.createElement("p");
+  msg.innerHTML = "Thank you for registering!";
+  msg.style.color = "green";
+  document.getElementsByClassName("form-container")[0].appendChild(msg);
+});
+
+const footer = document.createElement("footer");
+footer.innerHTML = "<p>© 2025 lenADHD | Updated: " + new Date().toLocaleTimeString() + "</p>";
+document.body.appendChild(footer);
+setInterval(function() {
+  const now = new Date();
+  footer.innerHTML = "<p>© " + now.getFullYear() + " lenADHD | Updated: " + now.toLocaleTimeString() + "</p>";
+}, 1000);
+</script>
+</body>
+</html>

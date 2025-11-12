@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style BLOG .css">
+</head>
+<body>
+    <header>
+        <h1>Hello to the World of Hope Where You Can Live a Better Life</h1>
+        <nav>
+            <a href="home page.html">Home</a>
+            <a href="courses exist.html">Courses</a>
+            <a href="contact us .html">Customer Support</a>
+            <a href="buttons.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section id="motivation">
+            <p>You are so much more than your challenges. Your unique mind is a gift, full of creativity, energy, and strength. ADHD is just one part of your story—it doesn’t define you. Yes, there will be struggles, but every challenge is a chance to grow and shine. Believe in yourself, take small steps every day, and surround yourself with people who support you. You are not alone, and you can reach your goals and live a happy, fulfilling life. The world needs your amazing talents, so keep going—you’ve got this!</p>
+            <img src="you are the best.jpeg" alt="motivating Image" width="250" height="250" />
+        </section>
+        <section id="motivation">
+            <h2>To Parents of Children with ADHD:</h2>
+            <p>You are doing an amazing job! Your love, patience, and support mean everything to your child. Parenting can be hard at times, but your understanding helps your child grow and feel confident. Focus on their strengths, celebrate their small successes, and remind them how special they are. With your care, they can overcome challenges and do great things. You are their biggest supporter, and you’re never alone on this journey!</p>
+            <img src="you can do it.jpeg" alt="motivating" width="250" height="250" />
+        </section>
+        <section id="motivation">
+            <h2>To All the Teachers Who Want to Help Students with ADHD:</h2>
+            <p>You have the power to change their lives. Your patience, kindness, and creativity can help them feel understood and supported. By creating a flexible and welcoming classroom, you can help them succeed and show their unique talents. Every small effort you make, from listening to them to adjusting your teaching, makes a big difference. Your belief in them gives them confidence and hope. Thank you for caring and helping these students shine!</p>
+            <img src="you are doing the best work.jpeg" alt="motivating" width="250" height="250" />
+        </section>
+        <section id="motivation">
+            <h2>To All the Students Who Want to Help Classmates with ADHD:</h2>
+            <p>Your kindness and support can make a huge difference in their lives. By being patient, understanding, and encouraging, you can help them feel included and confident. Simple acts, like listening to them, offering help, or just being a friend, can mean so much. Your willingness to stand by them and see their strengths shows incredible character. Together, you can create a positive and supportive environment where everyone can succeed.</p>
+        </section>
+        <section id="contact">
+            <p>Feel free to reach out to me at <a href="mailto:loly2006@gmail.com">loly2006@gmail.com</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 lenADHD. All rights reserved.</p>
+    </footer>
+    <script>
+
+const mainTitle = document.getElementsByTagName("h1")[0];
+const titleTexts = [
+  "Hello to the World of Hope Where You Can Live a Better Life",
+  "Welcome to a Space of Positivity and Strength",
+  "Your Journey with ADHD is Full of Power and Growth"
+];
+let t = 0;
+setInterval(function() {
+  mainTitle.innerHTML = titleTexts[t];
+  t = (t + 1) % titleTexts.length;
+}, 2500);
+
+const colors = ["#e874ec", "#ffd6ff", "#f9c0ff", "#d1a3ff"];
+let c = 0;
+setInterval(function() {
+  document.body.style.backgroundColor = colors[c];
+  c = (c + 1) % colors.length;
+}, 4000);
+
+const headings = document.getElementsByTagName("h2");
+let h = 0;
+setInterval(function() {
+  for (let x = 0; x < headings.length; x++) {
+    headings[x].style.color = "black";
+  }
+  if (headings.length > 0) {
+    headings[h].style.color = "purple";
+    h = (h + 1) % headings.length;
+  }
+}, 1500);
+
+const paragraphs = document.getElementsByTagName("p");
+const messages = [
+  "You are stronger than your challenges — keep believing in yourself!",
+  "Your patience and care make the biggest difference every day.",
+  "Your kindness and creativity inspire the next generation.",
+  "Together, we can make every classroom a space of hope and understanding."
+];
+let p = 0;
+setInterval(function() {
+  for (let i = 0; i < paragraphs.length - 1; i++) {
+    paragraphs[i].style.color = "black";
+  }
+  paragraphs[p % (paragraphs.length - 1)].style.color = "purple";
+  p++;
+}, 2000);
+
+const images = document.getElementsByTagName("img");
+const imageSources = [
+  "you are the best.jpeg",
+  "you can do it.jpeg",
+  "you are doing the best work.jpeg"
+];
+let imgIndex = 0;
+setInterval(function() {
+  for (let i = 0; i < images.length; i++) {
+    images[i].setAttribute("src", imageSources[imgIndex % imageSources.length]);
+  }
+  imgIndex++;
+}, 3000);
+
+const footer = document.getElementsByTagName("footer")[0];
+setInterval(function() {
+  const now = new Date();
+  footer.innerHTML = "<p>© " + now.getFullYear() + " lenADHD | Updated: " + now.toLocaleTimeString() + "</p>";
+}, 1000);
+</script>
+</body>
+</html>

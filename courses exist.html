@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="courses exist.css">
+</head>
+<body>
+    <header>
+        <h1>Courses</h1>
+        <nav>
+            <ul>
+                <li><a href="home page.html">Home</a></li>
+                <li><a href="live sessions .html">Live Sessions</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact us .html">Customer Support</a></li>
+                <li><a href="buttons.html">Login</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="course">
+            <h2>Parents and Students</h2>
+            <p>Description of Course 1</p>
+            <a href="parents and students courses .html" class="btn">Learn More</a>
+        </section>
+        <section class="course">
+            <h2>ADHD</h2>
+            <p>Description of Course 2</p>
+            <a href="ADHD course .html" class="btn">Learn More</a>
+        </section>
+        <section class="course">
+            <h2>Teachers</h2>
+            <p>Description of Course 3</p>
+            <a href="Teachers course .html" class="btn">Learn More</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 lenADHD</p>
+    </footer>
+    <script>
+
+const heading = document.getElementsByTagName("h1")[0];
+const headingTexts = ["Courses", "Our Best Learning Paths", "Explore and Learn"];
+let i = 0;
+setInterval(function() {
+  heading.innerHTML = headingTexts[i];
+  i = (i + 1) % headingTexts.length;
+}, 2500);
+
+const courses = document.getElementsByTagName("h2");
+let index = 0;
+setInterval(function() {
+  for (let x = 0; x < courses.length; x++) {
+    courses[x].innerHTML = ["Parents and Students", "ADHD", "Teachers"][x];
+  }
+  courses[index].style.color = "purple";
+  courses[(index + 2) % 3].style.color = "black"; 
+  index = (index + 1) % 3;
+}, 2000);
+
+const paragraphs = document.getElementsByTagName("p");
+const courseDescriptions = [
+  "Learn how to support students effectively.",
+  "Understand and manage ADHD in education.",
+  "Develop engaging teaching strategies."
+];
+let j = 0;
+setInterval(function() {
+  for (let k = 0; k < paragraphs.length - 1; k++) {
+    paragraphs[k].innerHTML = courseDescriptions[k];
+  }
+  j = (j + 1) % paragraphs.length;
+}, 3000);
+
+const colors = ["#e874ec", "#ffd6ff", "#d1a3ff", "#f9c0ff"];
+let c = 0;
+setInterval(function() {
+  document.body.style.backgroundColor = colors[c];
+  c = (c + 1) % colors.length;
+}, 4000);
+
+const buttons = document.getElementsByClassName("btn");
+let b = 0;
+setInterval(function() {
+  const btnTexts = ["Discover", "Learn More", "Start Now"];
+  for (let m = 0; m < buttons.length; m++) {
+    buttons[m].innerHTML = btnTexts[b];
+  }
+  b = (b + 1) % btnTexts.length;
+}, 2000);
+
+const footer = document.getElementsByTagName("footer")[0];
+setInterval(function() {
+  const date = new Date();
+  footer.innerHTML = "<p>© " + date.getFullYear() + " lenADHD | Updated: " + date.toLocaleTimeString() + "</p>";
+}, 1000);
+</script>
+</body>
+</html>
