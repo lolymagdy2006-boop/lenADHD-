@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3e5f5; 
+    margin: 0;
+    padding: 0;
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #ffffff; 
+    background: #6a1b9a; 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.session-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.session-slot {
+    background: #ffffff;
+    border: 1px solid #d1c4e9;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.session-slot .date,
+.session-slot .time {
+    font-size: 16px;
+    font-weight: 500;
+    color: #4a148c;
+}
+
+.session-slot.available button {
+    background: #8e24aa;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.session-slot.available button:hover {
+    background: #6a1b9a;
+}
+
+.session-slot.booked {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.session-slot.booked .status {
+    color: #d32f2f;
+    font-weight: bold;
+}

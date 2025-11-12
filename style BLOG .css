@@ -1,0 +1,113 @@
+body {
+    background-color: #f3e8fc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2e003e;
+}
+
+header {
+    text-align: center;
+    background-color: #a259ff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f3e8fc;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #7a1fa2;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+.motivation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #e0c3fc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.motivation .content {
+    flex: 1;
+}
+
+.motivation h2 {
+    text-align: center;
+    color: #4a0072;
+}
+
+.motivation p {
+    text-align: justify;
+    color: #4a0072;
+    line-height: 1.6;
+}
+
+.motivation img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#contact {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contact a {
+    color: #7a1fa2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #4a0072;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #a259ff;
+    margin-top: 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}

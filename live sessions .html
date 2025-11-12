@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style live sessions .css">
+    <title>Live Session Registration</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Register for Live Session</h2>
+        <form action="/submit_registration" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="date">Session Date</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Session Time</label>
+            <input type="time" id="time" name="time" required>
+            <button type="submit" formaction="home page.html">Register</button>
+        </form>
+    </div>
+</body>
+</html>

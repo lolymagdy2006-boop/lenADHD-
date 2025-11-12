@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses for Parents and Students</title>
+    <link rel="stylesheet" href="courses pages.css">
+</head>
+<body>
+    <header>
+        <h1>Courses for Teachers</h1>
+        <nav>
+            <ul>
+                <li><a href="home-page.html">Home</a></li>
+                <li><a href="live-sessions.html">Live Sessions</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="courses exist.html">Courses</a></li>
+                <li><a href="contact us .html">Customer Support</a></li>
+                <li><a href="buttons.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <section class="container">
+        <section class="course">
+            <h2>Course 1: </h2>
+            <p>This course provides an overview of ADHD, including symptoms, diagnosis, and treatment options.</p>
+            <button onclick="location.href='course registration.html'">Enroll Now</button>
+        </section>
+        <section class="course">
+            <h2>Course 2:</h2>
+            <button onclick="location.href='course registration.html'">Enroll Now</button>
+        </section>
+        <section class="course">
+            <h2>Course 3: </h2>
+            <p>This course offers practical tips and techniques to help students with ADHD improve their study habits.</p>
+            <button onclick="location.href='course registration.html'">Enroll Now</button>
+        </section>
+    </section>
+    </main>
+    <script>
+
+const mainTitle = document.getElementsByTagName("h1")[0];
+const titleMessages = [
+  "Courses for Teachers",
+  "Empower Your Teaching Skills",
+  "Grow with lenADHD Training"
+];
+let i = 0;
+setInterval(function() {
+  mainTitle.innerHTML = titleMessages[i];
+  i = (i + 1) % titleMessages.length;
+}, 2500);
+
+const colors = ["#e874ec", "#ffd6ff", "#f9c0ff", "#d1a3ff"];
+let c = 0;
+setInterval(function() {
+  document.body.style.backgroundColor = colors[c];
+  c = (c + 1) % colors.length;
+}, 4000);
+
+const titles = document.getElementsByTagName("h2");
+let t = 0;
+setInterval(function() {
+  for (let x = 0; x < titles.length; x++) {
+    titles[x].style.color = "black";
+  }
+  titles[t].style.color = "purple";
+  t = (t + 1) % titles.length;
+}, 1500);
+
+const paragraphs = document.getElementsByTagName("p");
+const descTexts = [
+  "Learn about ADHD and how to support students effectively.",
+  "Discover modern teaching methods for diverse learners.",
+  "Enhance your classroom management and communication skills."
+];
+let d = 0;
+setInterval(function() {
+  for (let k = 0; k < paragraphs.length; k++) {
+    paragraphs[k].innerHTML = descTexts[k];
+  }
+  d = (d + 1) % paragraphs.length;
+}, 3500);
+
+const buttons = document.getElementsByTagName("button");
+const btnTexts = ["Enroll Now", "Join Course", "Start Learning"];
+let b = 0;
+setInterval(function() {
+  for (let m = 0; m < buttons.length; m++) {
+    buttons[m].innerHTML = btnTexts[b];
+  }
+  b = (b + 1) % btnTexts.length;
+}, 2500);
+
+const footer = document.createElement("footer");
+footer.innerHTML = "<p>© 2025 lenADHD | Updated: " + new Date().toLocaleTimeString() + "</p>";
+document.body.appendChild(footer);
+setInterval(function() {
+  const now = new Date();
+  footer.innerHTML = "<p>© " + now.getFullYear() + " lenADHD | Updated: " + now.toLocaleTimeString() + "</p>";
+}, 1000);
+</script>
+</body>
+</html>

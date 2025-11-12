@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #d8b4e2;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #800080;
+}
+
+p {
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo {
+    width: 120px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon div {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+}
+
+.course-intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #a16dc5;
+}
+
+.course-intro h1 {
+    font-size: 2em;
+}
+
+.course-intro p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.start-course-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #800080;
+    border: 2px solid #800080;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-progress {
+    margin-top: 20px;
+}
+
+.course-progress input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.course-progress button {
+    padding: 10px;
+    background-color: #800080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-section {
+    padding: 40px 20px;
+}
+
+.course-category {
+    background-color: #946cbf;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.course-category h2 {
+    margin-bottom: 10px;
+}
+
+.lesson {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.lesson img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.lesson-details {
+    color: #fff;
+}
+
+.lesson-details h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.lesson-details p {
+    margin-bottom: 5px;
+}
+
+.faq-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #946cbf;
+}
+
+.faq {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question {
+    background-color: #fff;
+    color: #800080;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.question p {
+    display: none;
+}
+
+.question h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #d6b3e0;
+    padding: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.footer-content div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-content a {
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.subscribe {
+    text-align: center;
+    padding-top: 20px;
+    background-color: #c49bc6;
+    padding-bottom: 30px;
+}
+
+.subscribe p {
+    margin-bottom: 15px;
+}
+
+.subscribe form {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.subscribe input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.subscribe button {
+    padding: 10px;
+    background-color: #800080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
